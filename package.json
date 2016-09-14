@@ -28,6 +28,7 @@
     "del": "^2.2.0",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
+    "gulp-jsx": "^2.0.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-data": "^1.2.1",
     "gulp-load-plugins": "^1.2.2",
