@@ -57,14 +57,11 @@ const getData = (file) => {
 };
 
 gulp.task('views', () =>
-  gulp
-    .src([
-      'app/views/**/*.html',
-      '!app/views/**/_*.html'
-    ], { base: 'app/views' })
-    .pipe($.data(getData))
-    .pipe($.nunjucks.compile())
-    .pipe(gulp.dest('dist/'))
+  gulp.src('views/**/*.js')
+    .pipe($.jsx({
+      factory: 'React.createClass'
+    }))
+    .pipe(gulp.dest('dist'));
 );
 
 gulp.task('scripts', () =>
